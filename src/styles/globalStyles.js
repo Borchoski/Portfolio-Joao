@@ -7,8 +7,12 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
 
     }
+    body{
+        background: #212529;
+    }
     h1, h2, h3, h4, h5, h6, span, a, li, button, input, p, select, label {
-        font-family: 'Raleway', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+
     }
 
     button {
@@ -31,4 +35,30 @@ export const GlobalStyle = createGlobalStyle`
     textarea:focus {
         outline: 0;
     }
+
+    :root{
+    --gray6: #1A1B1F;
+    --gray5: #21232B;
+    --gray4: #373943;
+    --gray3: #50515E;
+    --gray2: #6B6C7A;
+    --gray1: #A9AAB2;
+
+    --fixed-white: #FFFFFF;
+
+    --color-primary: #6bd3eb;
+
+    --color-red: #cc2222;
+
+
+    --font1: 3rem;          // 48px
+    --font2: 2rem;          // 32 px
+    --font3: 1.5rem;        // 24px
+    --font4: 1.125rem;      //18px
+    --font5: 1rem;          // 16px              
+    --font6: .75rem;        //12px
+
+    --radius1: .5rem;    //8px
+    --radius2: 1rem;    //16px
+  }
 `;
