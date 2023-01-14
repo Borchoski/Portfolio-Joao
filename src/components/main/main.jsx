@@ -43,21 +43,26 @@ export const Main = () => {
                     >
                         Sobre mim:
                     </h2>
-                    <h3>
-                        Me chamo João, tenho 20 anos, moro no Paraná e comecei a
-                        estudar programação em junho de 2022, um amigo me
-                        mostrou esse mundo da programação e eu fique apaixonado.
-                        Desde sempre eu me dei bem com computadores e coisas
-                        digitais e desde o momento que comecei meu curso na
-                        Kenzie Academy foi um 'amor' imadiato com tudo que vi
-                        desde o momento que inicie o estudo. Estava fazendo
-                        engenharia eletrica na UTF-PR aqui da minha cidade e
-                        acabei trancando para estudar e travalhar em uma area
-                        que eu realmente gosto... a programação.
+                    <h3 style={{ fontSize: "17px" }}>
+                        <p>
+                            Me chamo João, tenho 20 anos, moro no Paraná e
+                            comecei a estudar programação em junho de 2022, um
+                            amigo me mostrou esse mundo e eu fique apaixonado.
+                        </p>
+                        <br />
+                        <p>
+                            Desde sempre eu me dei bem com computadores e coisas
+                            digitais e desde o momento que comecei meu curso na
+                            Kenzie Academy foi um 'amor' imadiato com tudo que
+                            vi, desde o momento que inicie o estudo. Estava
+                            fazendo engenharia eletrica na UTF-PR aqui da minha
+                            cidade e acabei trancando para estudar e trabalhar
+                            em uma area que eu realmente gosto... a programação.
+                        </p>
                     </h3>
                 </section>
                 <section>
-                    <h2> foto </h2>
+                    <h2> minha foto </h2>
                 </section>
             </div>
         </StyledMainDiv>

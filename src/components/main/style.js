@@ -6,9 +6,13 @@ export const StyledMainDiv = styled.div`
     flex-direction: column;
     gap: 30px;
 
+    margin-top: 90px;
+
     > div {
         display: flex;
         justify-content: space-between;
+
+        gap: 30px;
 
         > section {
             background: #868e96;
@@ -19,7 +23,7 @@ export const StyledMainDiv = styled.div`
         }
 
         > section:nth-child(1) {
-            width: 75%;
+            width: 90%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;

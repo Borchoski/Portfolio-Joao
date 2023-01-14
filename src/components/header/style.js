@@ -3,7 +3,10 @@ import styled from "styled-components";
 export const StyledHeader = styled.header`
     color: white;
 
+    background: #212529;
     width: 100%;
+
+    position: fixed;
 
     > header {
         padding: 0 15%;
@@ -21,7 +24,7 @@ export const StyledHeader = styled.header`
                 color: var(--color-primary);
             }
 
-            img{
+            img {
                 height: 80px;
             }
         }
