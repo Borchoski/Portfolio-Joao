@@ -6,6 +6,7 @@ import { UserContext } from "../../contexts/userContext";
 
 export const Header = () => {
     const { windowWidth } = useContext(UserContext);
+    const [modal, setModal] = useState(false || null);
 
     const toTop = () => {
         window.scrollTo({
@@ -39,9 +40,23 @@ export const Header = () => {
                         <a href="">CONTATO</a>
                     </nav>
                 ) : (
-                    <AiOutlineMenu size={30} color={"white"} />
+                    <AiOutlineMenu
+                        size={30}
+                        color={"white"}
+                        onClick={() => setModal(!modal)}
+                    />
                 )}
             </header>
+            <nav
+                className={
+                    !modal && modal === null ? null : modal ? "toDown" : "toUp"
+                }
+            >
+                <a href="https://github.com/Borchoski" target={"blank"}>
+                    GITHUB
+                </a>
+                <a href="">CONTATO</a>
+            </nav>
         </StyledHeader>
     );
 };

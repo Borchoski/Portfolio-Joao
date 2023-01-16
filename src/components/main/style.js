@@ -27,7 +27,7 @@ export const StyledMainDiv = styled.div`
             border-radius: var(--radius2);
 
             min-height: 30vh;
-            max-height: 80vh;
+            max-height: 30vh;
             padding: 16px;
 
             @media (max-width: 1100px) {
@@ -45,11 +45,14 @@ export const StyledMainDiv = styled.div`
             width: 90%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-evenly;
+            gap: 16px;
+
+
 
             @media (max-width: 1100px) {
                 width: 100%;
-                
+                max-height: 100%;
             }
 
             > section {
