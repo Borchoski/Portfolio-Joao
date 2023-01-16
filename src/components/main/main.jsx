@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { StyledMainDiv } from "./style";
 import { BsCodeSlash } from "react-icons/bs";
 import { AiFillHtml5, AiOutlineGithub, AiFillApi } from "react-icons/ai";
-import { DiCss3 } from "react-icons/di";
+import { DiCss3, DiGithubFull } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaRegFolderOpen } from "react-icons/fa";
 import { SiVercel } from "react-icons/si";
-import { BsBook } from "react-icons/bs";
+import { BsBook, BsArrowBarRight } from "react-icons/bs";
+import { RiGitRepositoryLine } from "react-icons/ri";
+import { GoRepo } from "react-icons/go";
 import minhaFoto from "../../imgs/minhaFoto.jpeg";
+import { UserContext } from "../../contexts/userContext";
 
 export const Main = () => {
+    const { userRepos } = useContext(UserContext);
+    const { widthWindow } = useContext(UserContext);
+
     return (
         <StyledMainDiv>
             <div>
@@ -33,14 +39,15 @@ export const Main = () => {
                         </span>{" "}
                     </h1>
                     <h3
-                        style={{
-                            fontSize: "var(--font3)",
-                        }}
+                        style={
+                            widthWindow > 600
+                                ? {
+                                      fontSize: "var(--font3)",
+                                  }
+                                : { fontSize: "1.4rem" }
+                        }
                     >
-                        Desenvolvedor {""}
-                        <span style={{ color: "var(--fixed-white)" }}>
-                            FullStack
-                        </span>
+                        Desenvolvedor FullStack
                         {""} em formação.
                     </h3>
                 </section>
@@ -80,16 +87,20 @@ export const Main = () => {
                 </section>
             </div>
             <div>
-                <section>
+                <section
+                    style={{
+                        gap: "1rem",
+                    }}
+                >
                     <h2>
                         <span style={{ color: "var(--fixed-white)" }}>
                             Tecnologias
                         </span>{" "}
-                        conhecidas  :
+                        conhecidas :
                     </h2>
                     <h3 style={{ fontSize: "17px" }}>
-                        Desde o inicio do meu curso estudei varios pontos da
-                        programação, dentre eles:
+                        Desde o inicio do meu curso estudei varios frames do
+                        desenvolvimento web, dentre eles:
                     </h3>
                     <section>
                         <span>
@@ -133,8 +144,46 @@ export const Main = () => {
                 </section>
             </div>
             <div>
-                <section></section>
-                <section></section>
+                <section style={{ gap: "16px" }}>
+                    <h2>Aqui mostro alguns dos meus projetos: </h2>
+                    <ul>
+                        {userRepos.map((element, i) => {
+                            if (i !== 0 && i <= 3) {
+                                return (
+                                    <li
+                                        onClick={() => {
+                                            document.getElementById(i).click();
+                                        }}
+                                        key={i}
+                                    >
+                                        <FaRegFolderOpen
+                                            size={50}
+                                            className="svgPost"
+                                        />
+                                        <a
+                                            href={element.html_url}
+                                            target={"blank"}
+                                            id={i}
+                                        >
+                                            <h3>{element.name}</h3>
+                                        </a>
+                                    </li>
+                                );
+                            }
+                            return null;
+                        })}
+                        <section>
+                            <button>
+                                <BsArrowBarRight size={50} />
+                                <h3>Clique aqui para ver todos os projetos</h3>
+                            </button>
+                        </section>
+                    </ul>
+                </section>
+                <section>
+                    <GoRepo size={80} />
+                    <DiGithubFull size={50} />
+                </section>
             </div>
         </StyledMainDiv>
     );
