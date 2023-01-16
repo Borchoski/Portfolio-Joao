@@ -36,6 +36,10 @@ export const StyledHeader = styled.header`
             > a {
                 font-size: 20px;
             }
+            button {
+                font-size: 20px;
+                color: var(--fixed-white);
+            }
         }
     }
 `;

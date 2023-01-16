@@ -1,6 +1,13 @@
 import React from "react";
 import { StyledMainDiv } from "./style";
 import { BsCodeSlash } from "react-icons/bs";
+import { AiFillHtml5, AiOutlineGithub, AiFillApi } from "react-icons/ai";
+import { DiCss3 } from "react-icons/di";
+import { IoLogoJavascript } from "react-icons/io";
+import { FaReact } from "react-icons/fa";
+import { SiVercel } from "react-icons/si";
+import { BsBook } from "react-icons/bs";
+import minhaFoto from "../../imgs/minhaFoto.jpeg";
 
 export const Main = () => {
     return (
@@ -20,14 +27,21 @@ export const Main = () => {
                             color: "white",
                         }}
                     >
-                        João Henrique Borchoski{" "}
+                        João Henrique{" "}
+                        <span style={{ color: "var(--color-primary)" }}>
+                            Borchoski
+                        </span>{" "}
                     </h1>
                     <h3
                         style={{
                             fontSize: "var(--font3)",
                         }}
                     >
-                        Desenvolvedor FullStack em formação.
+                        Desenvolvedor {""}
+                        <span style={{ color: "var(--fixed-white)" }}>
+                            FullStack
+                        </span>
+                        {""} em formação.
                     </h3>
                 </section>
                 <section>
@@ -62,8 +76,65 @@ export const Main = () => {
                     </h3>
                 </section>
                 <section>
-                    <h2> minha foto </h2>
+                    <img src={minhaFoto} alt="" />
                 </section>
+            </div>
+            <div>
+                <section>
+                    <h2>
+                        <span style={{ color: "var(--fixed-white)" }}>
+                            Tecnologias
+                        </span>{" "}
+                        conhecidas  :
+                    </h2>
+                    <h3 style={{ fontSize: "17px" }}>
+                        Desde o inicio do meu curso estudei varios pontos da
+                        programação, dentre eles:
+                    </h3>
+                    <section>
+                        <span>
+                            <AiFillHtml5 size={40} />
+                            <p>HTML</p>
+                        </span>
+
+                        <span>
+                            <DiCss3 size={40} />
+                            <p>CSS</p>
+                        </span>
+
+                        <span>
+                            <IoLogoJavascript size={40} />
+                            <p>JS</p>
+                        </span>
+
+                        <span>
+                            <AiOutlineGithub size={40} />
+                            <p>Github</p>
+                        </span>
+
+                        <span>
+                            <AiFillApi size={40} />
+                            <p> API's </p>
+                        </span>
+
+                        <span>
+                            <FaReact size={40} />
+                            <p>React</p>
+                        </span>
+
+                        <span>
+                            <SiVercel size={40} />
+                            <p>Vercel</p>
+                        </span>
+                    </section>
+                </section>
+                <section>
+                    <BsBook size={80} />
+                </section>
+            </div>
+            <div>
+                <section></section>
+                <section></section>
             </div>
         </StyledMainDiv>
     );
