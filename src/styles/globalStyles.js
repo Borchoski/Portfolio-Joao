@@ -10,6 +10,17 @@ export const GlobalStyle = createGlobalStyle`
     body{
         background: #212529;
     }
+
+    @media (max-width: 1100px) {
+        html, body {
+    overflow-x: hidden;
+    }
+    
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
     h1, h2, h3, h4, h5, h6, span, a, li, button, input, p, select, label {
         font-family: 'Montserrat', sans-serif;
 
