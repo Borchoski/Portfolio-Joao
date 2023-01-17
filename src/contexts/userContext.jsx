@@ -17,7 +17,7 @@ export const UserProvider = ({ children }) => {
 
             try {
                 const response = await Api.get("/users/Borchoski/repos");
-
+                // console.log(response.data
                 setUserRepos(response.data);
             } catch (error) {
                 console.log(error);
