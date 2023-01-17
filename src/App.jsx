@@ -3,6 +3,7 @@ import { StyledBody } from "./styles/styledApp";
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./pages/home/indexHome";
 import { UserProvider } from "./contexts/userContext";
+import { Repos } from "./pages/repos/indexRepos";
 
 function App() {
     return (
@@ -10,7 +11,7 @@ function App() {
             <StyledBody>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/repositories" />
+                    <Route path="/repos" element={<Repos />} />
                     <Route path="*" element={<Home />} />
                 </Routes>
             </StyledBody>

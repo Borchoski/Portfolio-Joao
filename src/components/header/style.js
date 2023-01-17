@@ -77,6 +77,13 @@ export const StyledHeader = styled.header`
             padding: 0 5%;
         }
 
+        > section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
         > div:nth-child(1) {
             display: flex;
             align-items: center;

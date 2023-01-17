@@ -1,12 +1,15 @@
 import React, { useContext, useState } from "react";
 import { StyledHeader } from "./style";
 import J from "../../imgs/logoJ.png";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineHome } from "react-icons/ai";
 import { UserContext } from "../../contexts/userContext";
+import { useNavigate } from "react-router-dom";
 
-export const Header = () => {
+export const Header = ({ sobre }) => {
     const { windowWidth } = useContext(UserContext);
     const [modal, setModal] = useState(false || null);
+
+    const navigate = useNavigate();
 
     const toTop = () => {
         window.scrollTo({
@@ -33,18 +36,31 @@ export const Header = () => {
 
                 {windowWidth > 1000 ? (
                     <nav>
-                        <button onClick={toTop}>SOBRE MIM</button>
+                        {sobre === "sobre" ? (
+                            <button onClick={toTop}>SOBRE MIM</button>
+                        ) : (
+                            <button onClick={() => navigate("/")}>HOME</button>
+                        )}
                         <a href="https://github.com/Borchoski" target={"blank"}>
                             GITHUB
                         </a>
-                        <a href="">CONTATO</a>
+                        <a href="mailto:joaoborchoskidev@gmail.com?">EMAIL</a>
                     </nav>
                 ) : (
-                    <AiOutlineMenu
-                        size={30}
-                        color={"white"}
-                        onClick={() => setModal(!modal)}
-                    />
+                    <section>
+                        {sobre !== "sobre" ? (
+                            <AiOutlineHome
+                                size={30}
+                                color={"white"}
+                                onClick={() => navigate("/")}
+                            />
+                        ) : null}
+                        <AiOutlineMenu
+                            size={30}
+                            color={"white"}
+                            onClick={() => setModal(!modal)}
+                        />
+                    </section>
                 )}
             </header>
             <nav
@@ -55,7 +71,7 @@ export const Header = () => {
                 <a href="https://github.com/Borchoski" target={"blank"}>
                     GITHUB
                 </a>
-                <a href="">CONTATO</a>
+                <a href="mailto:joaoborchoskidev@gmail.com?">EMAIL</a>
             </nav>
         </StyledHeader>
     );

@@ -6,7 +6,7 @@ export const StyledMainDiv = styled.div`
     flex-direction: column;
     gap: 30px;
 
-    margin: 90px 0;
+    margin: 90px 0 30px 0;
 
     @media (max-width: 1100px) {
         padding: 0 5%;
@@ -47,8 +47,6 @@ export const StyledMainDiv = styled.div`
             flex-direction: column;
             justify-content: space-evenly;
             gap: 16px;
-
-
 
             @media (max-width: 1100px) {
                 width: 100%;
@@ -106,19 +104,23 @@ export const StyledMainDiv = styled.div`
                     border: 2px solid #212529;
                     border-radius: var(--radius2);
 
+                    transition: all 0.5s;
+                    cursor: pointer;
+
                     h3 {
                         font-size: 14px;
                         text-align: center;
+                    }
+
+                    a {
+                        transition: all 0.5s;
                     }
                 }
 
                 li:hover {
                     border: 2px solid var(--color-primary);
-                    transition: 0.25s;
-                    cursor: pointer;
                 }
                 li:hover a {
-                    transition: 0.25s;
                     color: var(--color-primary);
                 }
 

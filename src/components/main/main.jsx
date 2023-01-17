@@ -11,10 +11,12 @@ import { RiGitRepositoryLine } from "react-icons/ri";
 import { GoRepo } from "react-icons/go";
 import minhaFoto from "../../imgs/minhaFoto.jpeg";
 import { UserContext } from "../../contexts/userContext";
+import { useNavigate } from "react-router-dom";
 
 export const Main = () => {
     const { userRepos } = useContext(UserContext);
     const { widthWindow } = useContext(UserContext);
+    const navigate = useNavigate();
 
     return (
         <StyledMainDiv>
@@ -74,11 +76,11 @@ export const Main = () => {
                         <p>
                             Desde sempre eu me dei bem com computadores e coisas
                             digitais e desde o momento que comecei meu curso na
-                            Kenzie Academy foi um 'amor' imadiato com tudo que
+                            Kenzie Academy foi um 'amor' imediato com tudo que
                             vi, desde o momento que inicie o estudo. Estava
-                            fazendo engenharia eletrica na UTF-PR aqui da minha
+                            fazendo engenharia elétrica na UTF-PR aqui da minha
                             cidade e acabei trancando para estudar e trabalhar
-                            em uma area que eu realmente gosto... a programação.
+                            em uma área que eu realmente gosto... A programação.
                         </p>
                     </h3>
                 </section>
@@ -99,7 +101,7 @@ export const Main = () => {
                         conhecidas :
                     </h2>
                     <h3 style={{ fontSize: "17px" }}>
-                        Desde o inicio do meu curso estudei varios frames do
+                        Desde o início do meu curso estudei vários frames do
                         desenvolvimento web, dentre eles:
                     </h3>
                     <section>
@@ -173,7 +175,7 @@ export const Main = () => {
                             return null;
                         })}
                         <section>
-                            <button>
+                            <button onClick={() => navigate("/repos")}>
                                 <BsArrowBarRight size={50} />
                                 <h3>Clique aqui para ver todos os projetos</h3>
                             </button>
@@ -182,7 +184,6 @@ export const Main = () => {
                 </section>
                 <section>
                     <GoRepo size={80} />
-                    <DiGithubFull size={50} />
                 </section>
             </div>
         </StyledMainDiv>
