@@ -70,17 +70,19 @@ export const Main = () => {
                         <p>
                             Me chamo João, tenho 20 anos, moro no Paraná e
                             comecei a estudar programação em junho de 2022, um
-                            amigo me mostrou esse mundo e eu fique apaixonado.
+                            amigo me mostrou esse mundo imediatamente me
+                            interessei e acabei me apaixonando.
                         </p>
                         <br />
                         <p>
-                            Desde sempre eu me dei bem com computadores e coisas
-                            digitais e desde o momento que comecei meu curso na
-                            Kenzie Academy foi um 'amor' imediato com tudo que
-                            vi, desde o momento que inicie o estudo. Estava
-                            fazendo engenharia elétrica na UTF-PR aqui da minha
-                            cidade e acabei trancando para estudar e trabalhar
-                            em uma área que eu realmente gosto... A programação.
+                            Desde sempre eu tenho bom desempenho com as
+                            tecnologias digitais, e a partir do momento que
+                            comecei meu curso na Kenzie Academy me encantei por
+                            tudo que vi no decorrer dos meus estudos. Estava
+                            cursando engenharia elétrica na UTF-PR em minha
+                            cidade (Ponta Grossa) e acabei trancando com intuito de cursar software e para
+                            estudar, trabalhar em uma área que eu realmente
+                            gosto: a programação.
                         </p>
                     </h3>
                 </section>
