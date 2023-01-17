@@ -6,7 +6,7 @@ import { StyledBodyHome } from "./styledHome";
 export const Home = () => {
     return (
         <StyledBodyHome>
-            <Header />
+            <Header sobre={'sobre'}/>
             <Main />
         </StyledBodyHome>
     );
