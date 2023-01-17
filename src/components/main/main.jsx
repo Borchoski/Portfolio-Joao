@@ -15,8 +15,8 @@ import { useNavigate } from "react-router-dom";
 
 export const Main = () => {
     const { userRepos } = useContext(UserContext);
-    const { widthWindow } = useContext(UserContext);
     const navigate = useNavigate();
+    const { widthWindow } = useContext(UserContext);
 
     return (
         <StyledMainDiv>
@@ -80,9 +80,9 @@ export const Main = () => {
                             comecei meu curso na Kenzie Academy me encantei por
                             tudo que vi no decorrer dos meus estudos. Estava
                             cursando engenharia elétrica na UTF-PR em minha
-                            cidade (Ponta Grossa) e acabei trancando com intuito de cursar software e para
-                            estudar, trabalhar em uma área que eu realmente
-                            gosto: a programação.
+                            cidade (Ponta Grossa) e acabei trancando com intuito
+                            de cursar software e para estudar, trabalhar em uma
+                            área que eu realmente gosto: a programação.
                         </p>
                     </h3>
                 </section>
