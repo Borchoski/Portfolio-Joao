@@ -8,7 +8,6 @@ import { UserContext } from "../../contexts/userContext";
 
 export const Repos = () => {
     const { userRepos } = useContext(UserContext);
-    console.log(userRepos[1]);
 
     return (
         <StyledBodyHome>
