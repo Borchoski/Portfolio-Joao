@@ -2,12 +2,11 @@ import React, { useContext } from "react";
 import { StyledMainDiv } from "./style";
 import { BsCodeSlash } from "react-icons/bs";
 import { AiFillHtml5, AiOutlineGithub, AiFillApi } from "react-icons/ai";
-import { DiCss3, DiGithubFull } from "react-icons/di";
+import { DiCss3 } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io";
-import { FaReact, FaRegFolderOpen } from "react-icons/fa";
-import { SiVercel } from "react-icons/si";
+import { FaReact, FaRegFolderOpen, FaNodeJs } from "react-icons/fa";
+import { SiVercel, SiPostgresql } from "react-icons/si";
 import { BsBook, BsArrowBarRight } from "react-icons/bs";
-import { RiGitRepositoryLine } from "react-icons/ri";
 import { GoRepo } from "react-icons/go";
 import minhaFoto from "../../imgs/minhaFoto.jpeg";
 import { UserContext } from "../../contexts/userContext";
@@ -27,7 +26,7 @@ export const Main = () => {
                             fontSize: "var(--font2)",
                         }}
                     >
-                        Olá, me chamo{" "}
+                        Hello, my name is{" "}
                     </h2>
                     <h1
                         style={{
@@ -49,8 +48,8 @@ export const Main = () => {
                                 : { fontSize: "1.4rem" }
                         }
                     >
-                        Desenvolvedor FullStack
-                        {""} em formação.
+                        FullStack Developer
+                        {""} training.
                     </h3>
                 </section>
                 <section>
@@ -64,25 +63,27 @@ export const Main = () => {
                             fontSize: "var(--font2)",
                         }}
                     >
-                        Sobre mim:
+                        About{" "}
+                        <span style={{ color: "var(--fixed-white)" }}>me</span>{" "}
+                        :
                     </h2>
                     <h3 style={{ fontSize: "17px" }}>
                         <p>
-                            Me chamo João, tenho 20 anos, moro no Paraná e
-                            comecei a estudar programação em junho de 2022, um
-                            amigo me mostrou esse mundo imediatamente me
-                            interessei e acabei me apaixonando.
+                            My name is João, I'm 20 years old, I live in Paraná
+                            and I started studying programming in June 2022.
+                            friend showed me this world immediately immediately
+                            I became interested and ended up falling in love.
                         </p>
                         <br />
                         <p>
-                            Desde sempre eu tenho bom desempenho com as
-                            tecnologias digitais, e a partir do momento que
-                            comecei meu curso na Kenzie Academy me encantei por
-                            tudo que vi no decorrer dos meus estudos. Estava
-                            cursando engenharia elétrica na UTF-PR em minha
-                            cidade (Ponta Grossa) e acabei trancando com intuito
-                            de cursar software e para estudar, trabalhar em uma
-                            área que eu realmente gosto: a programação.
+                            I have always performed well with digital digital
+                            technologies, and from the moment started my course
+                            at Kenzie Academy I was enchanted by everything that
+                            I saw in the course of my studies. I was I was
+                            studying electrical engineering at UTF-PR in my city
+                            (Ponta Grossa) and ended up canceling it with the to
+                            study and work in an area that I really like:
+                            programming.
                         </p>
                     </h3>
                 </section>
@@ -98,13 +99,13 @@ export const Main = () => {
                 >
                     <h2>
                         <span style={{ color: "var(--fixed-white)" }}>
-                            Tecnologias
+                            Technologies
                         </span>{" "}
-                        conhecidas :
+                        learneds :
                     </h2>
                     <h3 style={{ fontSize: "17px" }}>
-                        Desde o início do meu curso estudei vários frames do
-                        desenvolvimento web, dentre eles:
+                        Since the beginning of my course I have studied several
+                        frames of web development, among them:
                     </h3>
                     <section>
                         <span>
@@ -141,6 +142,14 @@ export const Main = () => {
                             <SiVercel size={40} />
                             <p>Vercel</p>
                         </span>
+                        <span>
+                            <SiPostgresql size={40} />
+                            <p>PostgreSQL</p>
+                        </span>
+                        <span>
+                            <FaNodeJs size={40} />
+                            <p>Node.js</p>
+                        </span>
                     </section>
                 </section>
                 <section>
@@ -149,7 +158,13 @@ export const Main = () => {
             </div>
             <div>
                 <section style={{ gap: "16px" }}>
-                    <h2>Aqui mostro alguns dos meus projetos: </h2>
+                    <h2>
+                        Here I show some of my{" "}
+                        <span style={{ color: "var(--fixed-white)" }}>
+                            projects
+                        </span>{" "}
+                        :{" "}
+                    </h2>
                     <ul>
                         {userRepos.map((element, i) => {
                             if (i !== 0 && i <= 3) {
@@ -179,7 +194,7 @@ export const Main = () => {
                         <section>
                             <button onClick={() => navigate("/repos")}>
                                 <BsArrowBarRight size={50} />
-                                <h3>Clique aqui para ver todos os projetos</h3>
+                                <h3>Click here to see all projects</h3>
                             </button>
                         </section>
                     </ul>

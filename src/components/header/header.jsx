@@ -37,7 +37,7 @@ export const Header = ({ sobre }) => {
                 {windowWidth > 1000 ? (
                     <nav>
                         {sobre === "sobre" ? (
-                            <button onClick={toTop}>SOBRE MIM</button>
+                            <button onClick={toTop}>ABOUT ME</button>
                         ) : (
                             <button onClick={() => navigate("/")}>HOME</button>
                         )}

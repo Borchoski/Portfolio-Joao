@@ -33,10 +33,16 @@ export const StyledMainDiv = styled.div`
             @media (max-width: 1100px) {
                 h2 {
                     font-size: 1.4rem !important;
+                    line-height: 22px;
                 }
 
                 h1 {
                     font-size: 1.5rem !important;
+                    line-height: 22px;
+                }
+
+                h3 {
+                    line-height: 22px;
                 }
             }
         }
